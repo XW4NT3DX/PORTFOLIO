@@ -1,38 +1,657 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-image: url('/public/HOME.png'); */
+  background-color: #000;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100% !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid rgb(219, 21, 21); /* Blue */
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top:50%;
+  left: 48%;
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card{
+  background-color: #121212;
+  border-radius: 25px;
+  color: #f3f3f3;
 }
 
-.App-link {
-  color: #61dafb;
+
+.typing-animation::before {
+  content: "Hi, I'm Ayoub El Ouarzazi, a 21-year-old Cyber Security Specialist dedicated";
+  display: block;
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 0, 0);
+  white-space: nowrap;
+  animation: typing 5s steps(80, end) forwards;
+  
 }
 
-@keyframes App-logo-spin {
+.typing-animation::after {
+  content: "to safeguarding digital landscapes and ensuring robust online security";
+  display: block;
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 0, 0);
+  white-space: nowrap;
+  animation: typing 5s steps(80, end) forwards;
+}
+
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
+  }
+}
+
+.aboutcard{
+  background-color: black;
+}
+.mypic{
+  margin-left: 20%;
+  transform: translateY(-40%);
+}
+@media only screen and (max-width: 600px) {
+  body {
+    /* background-size: cover; */
+    overflow-x: hidden !important;
+    margin: 0;
+
+    
+
+  }
+  
+
+  
+  .main-child{
+    justify-content: center;
+  }
+  .pic{
+    position: static;
+
+    transform: translateX(10%);
+  }
+  .about-child{
+    flex-wrap: wrap;
+  }
+  .skill-card{
+    transition: none !important;
+    transform: none !important;
+  }
+  #mytext{
+    font-size:50px ;
+    margin-bottom: 2%;
+  }
+    .nametitle{
+    font-size: 40px;
+  }
+  .icons{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    text-align: center  ;
+  }
+
+  .aboutbg {
+    background-color: #b81f1f; 
+    padding: 10px;
+    border-radius: 10px; 
+    color: #f3f3f3; 
+    font-size: 40px;
+  }
+  
+  header{
+    position:static !important;
+  }
+  .parag{
+  display: none;
+}
+  .marque{
+    display: none;
+
+  }
+  .ball{
+    width: 10%;
+    height: 10%;
+  }
+  .skills{
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+.mypic{
+  margin-left: 0;
+  transform: translateX(13%);
+  padding-top: 40%;
+  width: 80%;
+  /* transform: translateY(90%); */
+}
+
+  .skills{
+    transition: none !important;
+    transform: none !important;;
+
+  }
+  .main{
+    transition: none !important;
+    transform: none !important;;
+
+  }
+  .aboutcard{
+    transition: none !important;
+    transform: none !important;
+    /* transition: "transform 0.3s ease-in-out", */
+  }
+  .main{
+    margin-top: 51%;
+
+  }
+  .home{
+    margin: 0;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .loader {
+    top: 30%;
+    left: 40%;
+  }
+
+  header nav {
+    justify-content: center;
+    padding: 2%;
+  }
+
+  .main h1 {
+    font-size: 4rem;
+    margin-top: 8%;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+
+  .main .flex p {
+    margin-right: 15%;
+  }
+
+  .main img {
+    left: 65%;
+    width: 50%;
+  }
+
+  .main .card p {
+    margin-right: 30%;
+  }
+
+  .main .flex img {
+    left: 69%;
+  }
+
+  .aboutcard {
+    margin-top: 2%;
+  }
+
+  .aboutcard h1 {
+    font-size: 4rem;
+  }
+
+.nametitle{
+      text-align: center;
+    }
+
+
+
+  .skills h1 {
+    margin-top: 1%;
+  }
+
+  .skills .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-top: 15%;
+  }
+
+  footer {
+    margin-top: 15%;
+  }
+
+  footer h1 {
+    font-size: 2.5rem;
+  }
+
+  footer .flex img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5%;
+  }
+
+  footer hr {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  footer .text-center p,
+  footer .text-center h1 {
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 15%;
+    padding: 4%;
+  }
+
+  footer h1 {
+    font-size: 3rem;
+  }
+
+  footer .flex {
+    flex-direction: column;
+  }
+
+  footer .flex .items-center {
+    margin-bottom: 4%;
+  }
+
+  footer .flex img {
+    margin-bottom: 2%;
+  }
+
+  footer .flex p {
+    text-align: center;
+  }
+
+  footer hr {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  footer .text-center {
+    margin-top: 8%;
+  }
+
+  footer .text-center h1 {
+    font-size: 1.5rem;
+  }
+  .main{
+    text-align: center;
+    align-items: center;
+  }
+
+    .field-card {
+      margin: 0;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      transform: translateX(4%) !important;
+    }
+    .aboutbg{
+      justify-content: center !important;
+      text-align: center !important;
+      align-items: center !important;
+      font-size: 30px;
+      /* transform: translateX(4%) !important; */
+      padding-left: 9%;
+      width: 90%;
+      margin-bottom: 30%;
+      
+    }
+  .mytext{
+    transform: translateX(-2%) !important;
+
+  }
+  .nametitle{
+    font-size: 35px !important;
+    text-decoration: underline #b81f1f;
+  }
+  .nametitle2{
+    display: none;
+  }
+  .nametitle3{
+    font-size: 20px !important;
+  }
+  .home{
+    font-size: 150%;
+  }
+  .aboutLink{
+    font-size: 150%;
+
+  }  
+  .contactLink{
+    font-size: 150%;
+
+  }  
+  .cvLink{
+    font-size: 150%;
+
+  }  
+  .skillsLink{
+    font-size: 150%;
+
+  }
+  nav{
+    justify-content: center ;
+    transform: translateX(3%);
+  }
+  .nametitle3{
+    font-size: 18px !important;
+  }
+  #mytext{
+    margin-top: -12%;
+  }
+  #about{
+    margin-top: 60%;
+  }
+  #skills{
+    margin-top: 50%;
+
+  }
+  .home{
+    margin-right: 0;
+  }
+  .nav{
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    background-size: cover;
+  overflow-x: hidden;
+
+  }
+  .home{
+    margin: 0;
+  }
+  .skill-card{
+    transition: none !important;
+    transform: none !important;
+  }
+  .skills{
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .mypic{
+    display: none;
+  }
+
+  header nav {
+    justify-content: center;
+    padding: 2%;
+  }
+  .pic{
+    display: none;
+  }
+  .skills{
+    transition: none !important;
+    transform: none !important;;
+
+  }
+  .main{
+    transition: none !important;
+    transform: none !important;;
+
+  }
+  .aboutcard{
+    transition: none !important;
+    transform: none !important;;
+    /* transition: "transform 0.3s ease-in-out", */
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+
+  .icons{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    text-align: center  ;
+  }
+  .aboutbg {
+    background-color: #121212; 
+    padding: 10px;
+    border-radius: 10px; 
+    color: #f3f3f3; 
+  }
+  
+  header{
+    position:static !important;
+  }
+  .parag{
+  display: none;
+}
+  .marque{
+    display: none;
+
+  }
+  .loader {
+    top: 30%;
+    left: 40%;
+  }
+
+  header nav {
+    justify-content: center;
+    padding: 2%;
+  }
+
+  .main h1 {
+    font-size: 4rem;
+    margin-top: 8%;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+
+  .main .flex p {
+    margin-right: 15%;
+  }
+
+  .main img {
+    left: 65%;
+    width: 50%;
+  }
+
+  .main .card p {
+    margin-right: 30%;
+  }
+
+  .main .flex img {
+    left: 69%;
+  }
+
+  .aboutcard {
+    margin-top: 2%;
+  }
+
+  .aboutcard h1 {
+    font-size: 4rem;
+  }
+
+  .aboutcard h1,
+  .aboutcard .text-white {
+    text-align: center;
+  }
+
+  .aboutcard img {
+    top: 14%;
+    left: 60%;
+    width: 35%;
+  }
+
+  .skills h1 {
+    margin-top: 1%;
+  }
+
+  .skills .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-top: 15%;
+  }
+
+  footer {
+    margin-top: 15%;
+  }
+
+  footer h1 {
+    font-size: 2.5rem;
+  }
+
+  footer .flex img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5%;
+  }
+
+  footer hr {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  footer .text-center p,
+  footer .text-center h1 {
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 15%;
+    padding: 4%;
+  }
+
+  footer h1 {
+    font-size: 3rem;
+  }
+
+  footer .flex {
+    flex-direction: column;
+  }
+
+  footer .flex .items-center {
+    margin-bottom: 4%;
+  }
+
+  footer .flex img {
+    margin-bottom: 2%;
+  }
+
+  footer .flex p {
+    text-align: center;
+  }
+
+  footer hr {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  footer .text-center {
+    margin-top: 8%;
+  }
+
+  footer .text-center h1 {
+    font-size: 1.5rem;
+  }
+  #mytext{
+    font-size:50px ;
+    margin-bottom: 2%;
+  }
+    .nametitle{
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px){
+
+
+  .skills{
+    transition: none !important;
+    transform: none !important;;
+
+  }
+  .foot{
+    text-align: center !important;
+    justify-content: center !important;
+    flex-direction: column;
+  }
+    .nametitle{
+    font-size: 40px;
+  }
+  .pic{
+    top: 10%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .main{
+    text-align: center;
+  }
+  #mytext{
+    font-size:50px ;
+    margin-bottom: 2%;
+    /* margin: 0; */
+    transform: translateX(-8%);
+  }
+  .field-card{
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    /* margin-left: -5%; */
+
+  }
+  .aboutbg{
+      background-color: #b81f1f;
+      text-align: center;
+      font-size: 35px;
+
+  }
+  .nametitle{
+    text-align: center;
+
+  }
+  .nametitle3{
+    text-align: left;
+    font-size: 30px;
   }
 }
