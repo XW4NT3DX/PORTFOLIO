@@ -48,7 +48,7 @@ export default function App() {
   useEffect(()=>{
     const skillsLinks = document.getElementsByClassName("skillsLink");
     const numberheight = window.scrollY
-    if(numberheight>=850 && numberheight<2050){    
+    if(numberheight>=900 && numberheight<1900){    
         setskills(3000-3000)
 
         for (let i = 0; i < skillsLinks.length; i++) {
@@ -194,7 +194,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="mt-[2%]" id="about"></div>
+          <div className="mt-[15%] mb-[-10%]" id="about"></div>
           <div className="">
             <div className="flex justify-center about">
               <h1 className="text-neutral-50 font-mono text-5xl mt-[15%] aboutbg">
@@ -231,7 +231,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div id="skills" className=" mb-[5%]"></div>
+          <div id="skills" className="mt=[5%] mb-[5%]"></div>
           <div className="mt-[2%] skills"  >
             <div className="text-center">
               <h1 className="text-neutral-50 font-mono text-5xl mt-[1%] ">
