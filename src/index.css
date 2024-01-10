@@ -190,10 +190,6 @@ code {
     text-align: center;
     margin: 0;
   }
-  .loader {
-    top: 30%;
-    left: 40%;
-  }
 
   header nav {
     justify-content: center;
