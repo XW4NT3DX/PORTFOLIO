@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { skills } from "./skills";
 import { Link, animateScroll as scroll } from "react-scroll";
+
+
 import './index.css'
 const Loader = () => <div className="loader"></div>;
 
@@ -204,9 +206,9 @@ export default function App() {
                   className="text-neutral-50 text-3xl font-mono border-red-600  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer contactLink"
                 >
                   CONTACT
-                </Link>{" "}
+                </Link>
                 <a
-                  href="https://drive.google.com/file/d/1imQoZnbDIItiVCaLSUAEDnkgNVL44bdG/view"
+                  href="https://drive.google.com/file/d/1_-qi-ua1tZ3yIgfVAG0jQbhGAMtt5rQa/view?usp=sharing"
                   className="text-neutral-50 text-3xl font-mono border-red-600  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer cvLink"
                 >
                   MY CV
