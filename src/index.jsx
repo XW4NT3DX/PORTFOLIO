@@ -18,7 +18,7 @@ export default function App() {
       const numberheight = window.scrollY;
   
       if (numberheight >= 370 && numberheight < 1400) {
-        setAbout(2000 - 2000);
+        setAbout(3000 - 3000);
         setOpacity(1);
   
         for (let i = 0; i < aboutLinks.length; i++) {
@@ -26,7 +26,7 @@ export default function App() {
         
         }
       } else {
-        setAbout(2000);
+        setAbout(3000);
         setOpacity(0);
   
         for (let i = 0; i < aboutLinks.length; i++) {
@@ -49,7 +49,7 @@ export default function App() {
     const skillsLinks = document.getElementsByClassName("skillsLink");
     const numberheight = window.scrollY
     if(numberheight>=850 && numberheight<2050){    
-        setskills(2000-2000)
+        setskills(3000-3000)
 
         for (let i = 0; i < skillsLinks.length; i++) {
           skillsLinks[i].style.color = "red";
@@ -57,7 +57,7 @@ export default function App() {
         }
   }
   else{
-    setskills(2000)
+    setskills(3000)
     for (let i = 0; i < skillsLinks.length; i++) {
       skillsLinks[i].style.color = "white";
     }
@@ -69,12 +69,12 @@ export default function App() {
     const handleScroll = () => {
       const numberheight = window.scrollY
       if(numberheight>=0 && numberheight<410){    
-          setScrollPos(2000-2000)
+          setScrollPos(3000-3000)
           
           }
     
     else{
-      setScrollPos(2000)
+      setScrollPos(3000)
     };
   }
 
@@ -231,8 +231,8 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div id="skills" className="mt-[5%] mb-[5%]"></div>
-          <div className="mt-[15%] skills"  >
+          <div id="skills" className=" mb-[5%]"></div>
+          <div className="mt-[2%] skills"  >
             <div className="text-center">
               <h1 className="text-neutral-50 font-mono text-5xl mt-[1%] ">
                 SKILLS
