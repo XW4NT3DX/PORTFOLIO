@@ -208,6 +208,7 @@ export default function App() {
                   CONTACT
                 </Link>
                 <a
+                  target="_blank"
                   href="https://drive.google.com/file/d/1_-qi-ua1tZ3yIgfVAG0jQbhGAMtt5rQa/view?usp=sharing"
                   className="text-neutral-50 text-3xl font-mono border-red-600  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer cvLink"
                 >
@@ -230,7 +231,8 @@ export default function App() {
                 </p>
               </div>
               <div className="flex flex-row flex-wrap main-child">
-                <p className="text-neutral-50 font-mono text-2xl ml-[9%] mt-[1%]  typing-animation parag"></p>
+              <p className="text-neutral-50 font-mono text-2xl ml-[9%] mt-[1%] flex-wrap  typing-animation parag"></p>
+              {/* <p className="text-neutral-50 font-mono text-2xl ml-[9%] mt-[1%] parag2"></p> */}
                 <img
                   src="/pclogo.png"
                   alt=""
