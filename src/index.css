@@ -103,6 +103,7 @@ code {
     position: static;
 
     transform: translateX(10%);
+
   }
   .about-child{
     flex-wrap: wrap;
@@ -468,8 +469,6 @@ code {
     display: none;
 
   }
-
-
   header nav {
     justify-content: center;
     padding: 2%;
@@ -606,6 +605,10 @@ code {
   .skills{
     transition: none !important;
     transform: none !important;;
+  }
+  #about{
+    /* margin-bottom: 15%; */
+    margin-top: 10%;
 
   }
   .foot{

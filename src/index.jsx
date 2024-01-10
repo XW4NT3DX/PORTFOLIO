@@ -17,7 +17,7 @@ export default function App() {
   
       const numberheight = window.scrollY;
   
-      if (numberheight >= 370 && numberheight < 1400) {
+      if (numberheight >= 180 && numberheight < 1200) {
         setAbout(3000 - 3000);
         setOpacity(1);
   
@@ -44,11 +44,54 @@ export default function App() {
       window.removeEventListener("scroll", handleAboutScroll);
     };
   }, [window.scrollY]);
+  useEffect(() => {
+    const handlecontactScroll = () => {
+      const contactLinks = document.getElementsByClassName("contactLink");
+      const skillsLinks = document.getElementsByClassName("skillsLink");
   
+      const numberheight = window.scrollY;
+  
+      if (numberheight >= 2100 && numberheight < 3000) {
+        // setAbout(3000 - 3000);
+        // setOpacity(1);
+  
+        for (let i = 0; i < contactLinks.length; i++) {
+          contactLinks[i].style.color = "red";
+          skillsLinks[i].style.color = "white";
+        
+        }
+
+      } 
+      else if(numberheight>=1200 && numberheight<2000){
+
+        for (let i = 0; i < contactLinks.length; i++) {
+          // contactLinks[i].style.color = "red";
+          skillsLinks[i].style.color = "red";
+        
+        }
+      }
+      else {
+  
+        for (let i = 0; i < contactLinks.length; i++) {
+          contactLinks[i].style.color = "white";
+          // skillsLinks[i].style.color = "red";
+        }
+      }
+    };
+  
+    handlecontactScroll();
+  
+
+    window.addEventListener("scroll", handlecontactScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handlecontactScroll);
+    };
+  }, [window.scrollY]);
   useEffect(()=>{
     const skillsLinks = document.getElementsByClassName("skillsLink");
     const numberheight = window.scrollY
-    if(numberheight>=900 && numberheight<1900){    
+    if(numberheight>=1200 && numberheight<2000){    
         setskills(3000-3000)
 
         for (let i = 0; i < skillsLinks.length; i++) {
@@ -194,10 +237,10 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="mt-[15%] mb-[-10%]" id="about"></div>
+          <div className="mt-[6%]" id="about"></div>
           <div className="">
             <div className="flex justify-center about">
-              <h1 className="text-neutral-50 font-mono text-5xl mt-[15%] aboutbg">
+              <h1 className="text-neutral-50 font-mono text-5xl mt-[5%] aboutbg">
                 ABOUT ME :
               </h1>
             </div>
