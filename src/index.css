@@ -17,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
 }
-
+w
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -468,10 +468,7 @@ code {
     display: none;
 
   }
-  .loader {
-    top: 30%;
-    left: 40%;
-  }
+
 
   header nav {
     justify-content: center;
