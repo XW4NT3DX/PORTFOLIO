@@ -17,7 +17,7 @@ export default function App() {
   
       const numberheight = window.scrollY;
   
-      if (numberheight >= 370 && numberheight < 1200) {
+      if (numberheight >= 370 && numberheight < 1400) {
         setAbout(2000 - 2000);
         setOpacity(1);
   
@@ -67,8 +67,16 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(window.scrollY);
+      const numberheight = window.scrollY
+      if(numberheight>=0 && numberheight<410){    
+          setScrollPos(2000-2000)
+          
+          }
+    
+    else{
+      setScrollPos(2000)
     };
+  }
 
 
 
@@ -87,7 +95,7 @@ export default function App() {
 
   const mainStyle = {
     transform: `translateX(${scrollPos * -1}px)`,
-    transition: "transform 0.3s ease-in-out",
+    transition: "transform 0.8s ease-in-out",
   };
 
   const aboutStyle = {
@@ -130,7 +138,7 @@ export default function App() {
                   spy={true}
                   smooth={true}
                   duration={800}
-                  className="text-neutral-50 text-3xl  font-mono border-red-600 hover:border-b-4 decoration-solid mr-[4%] cursor-pointer pb-[1%] aboutLink"
+                  className="text-neutral-50 text-3xl  font-mono border-red-600 hover:border-b-4 decoration-solid mr-[4%] cursor-pointer  aboutLink"
                 >
                   ABOUT
                 </Link>
@@ -156,7 +164,7 @@ export default function App() {
                 </Link>{" "}
                 <a
                   href="https://drive.google.com/file/d/1imQoZnbDIItiVCaLSUAEDnkgNVL44bdG/view"
-                  className="text-neutral-50 text-3xl font-mono border-red-600  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer"
+                  className="text-neutral-50 text-3xl font-mono border-red-600  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer cvLink"
                 >
                   MY CV
                 </a>
@@ -176,35 +184,35 @@ export default function App() {
                   CYBER SECURITY SPECIALIST
                 </p>
               </div>
-              <div className="flex">
-                <p className="text-neutral-50 font-mono text-2xl ml-[9%] mt-[1%] mr-[30%] typing-animation parag"></p>
+              <div className="flex flex-row flex-wrap main-child">
+                <p className="text-neutral-50 font-mono text-2xl ml-[9%] mt-[1%]  typing-animation parag"></p>
                 <img
                   src="/pclogo.png"
                   alt=""
-                  className="absolute top-[19px] left-[69%] w-[35%] pic"
+                  className="absolute left-[75%] w-[25%] pic"
                 />
               </div>
             </div>
           </div>
-          <div className="mt-[5%]" id="about"></div>
+          <div className="mt-[2%]" id="about"></div>
           <div className="">
-            <div className="text-center about">
+            <div className="flex justify-center about">
               <h1 className="text-neutral-50 font-mono text-5xl mt-[15%] aboutbg">
                 ABOUT ME :
               </h1>
             </div>
             <div
-              className="  mt-[2%] ml-[2%] mr-[2%] rounded-lg main-about pb-[6%] pt-[1%]  aboutcard  hover:scale-105 hover:border-4 hover:border-red-700 hover:shadow-red"
+              className="  mt-[2%] ml-[2%] mr-[2%] rounded-lg main-about pb-[6%] pt-[1%]  aboutcard  "
               style={aboutStyle}
             >
-              <div className="absolute top-0 right-0 bg-red-700 rounded-bl-full w-40 h-40 ball" ></div>
-              <div className="mt-[3%] ml-[5%] ">
+              {/* <div className="absolute top-0 right-0 bg-red-700 rounded-bl-full w-40 h-40 ball" ></div> */}
+              <div className="mt-[3%] ml-[3%] ">
                 <h1 className="text-white font-mono text-5xl nametitle">Who am I?</h1>
                 <h1 className="text-white text-8xl mt-[1%]  font-mono nametitle2">
                   EL OUARZAZI <br /> AYOUB
                 </h1>
                 <br />
-                <div className="">
+                <div className="flex flex-row about-child">
                   <p className="text-white font-mono text-2xl nametitle3">
                     I'm Ayoub El Ouarzazi, a 21-year-old deeply passionate about
                     the cyber security domain. <br />
@@ -217,7 +225,7 @@ export default function App() {
                   <img
                     src="./pc.png"
                     alt="gkkg"
-                    className="absolute top-[12.5%] left-[72%] drop-shadow-xl w-[35%] mypic"
+                    className=" drop-shadow-xl  w-[35%] mypic"
                   />
                 </div>
               </div>
@@ -256,16 +264,16 @@ export default function App() {
             <div className="text-center mb-6">
               <h1 className="text-5xl font-bold">CONTACT :</h1>
             </div>
-            <div className="flex flex-row justify-around space-y-4">
-              <div className="flex items-center">
+            <div className="flex flex-row  justify-around space-y-4 foot">
+              <div className="flex items-center justify-center">
                 <img src="./phone.png" alt="phone" className="w-10 h-10 mr-4" />
                 <p className="font-bold text-xl">+212 681-163257</p>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 <img src="./email.png" alt="email" className="w-10 h-10 mr-4" />
                 <p className="font-bold text-xl">ayoubelouarzazi1@gmail.com</p>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 <img
                   src="./location.png"
                   alt="location"
