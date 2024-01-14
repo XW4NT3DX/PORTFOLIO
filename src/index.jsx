@@ -300,7 +300,7 @@ export default function App() {
                 </Link>
                 <a
                   target="_blank"
-                  href="https://drive.google.com/file/d/1_-qi-ua1tZ3yIgfVAG0jQbhGAMtt5rQa/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1UcdtSLgW0RH5HVJlEkYp2UmvsC_c-rqE/view?usp=sharing"
                   className="text-red-600 text-3xl font-mono border-white  hover:border-b-4 decoration-solid mr-[4%] cursor-pointer cvLink"
                 >
                   MY CV
